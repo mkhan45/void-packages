@@ -1,6 +1,6 @@
 # Template file for 'networkmanager-qt5'
 pkgname=networkmanager-qt5
-version=5.71.0
+version=5.73.0
 revision=1
 wrksrc="${pkgname%5}-${version}"
 build_style=cmake
@@ -11,9 +11,9 @@ depends="NetworkManager"
 short_desc="Qt wrapper for NetworkManager API"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
-homepage="https://projects.kde.org/projects/frameworks/networkmanager-qt"
+homepage="https://invent.kde.org/frameworks/networkmanager-qt"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname%5}-${version}.tar.xz"
-checksum=7fe6a0c9d9b25c434c6a200de19f722d942165252cc9161f1d8fcddf64147034
+checksum=b909feafc0a9a18b59744e0f1973c5357f67bbd50b59afa82cf55955dae7d41f
 
 networkmanager-qt5-devel_package() {
 	short_desc+=" - development"

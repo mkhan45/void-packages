@@ -1,6 +1,6 @@
 # Template file for 'extra-cmake-modules'
 pkgname=extra-cmake-modules
-version=5.71.0
+version=5.73.0
 revision=1
 archs=noarch
 build_style=cmake
@@ -10,9 +10,9 @@ depends="cmake"
 short_desc="Extra modules and scripts for CMake"
 maintainer="John <me@johnnynator.dev>"
 license="BSD-3-Clause"
-homepage="https://projects.kde.org/projects/kdesupport/extra-cmake-modules"
+homepage="https://invent.kde.org/frameworks/extra-cmake-modules"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=64f41c0b4b3164c7be8fcab5c0181253d97d1e9d62455fd540cb463afd051878
+checksum=c5e3ef0253f7d5ab3adf9185950e34fd620a3d5baaf3bcc15892f971fc3274c4
 python_version=3
 
 post_install() {

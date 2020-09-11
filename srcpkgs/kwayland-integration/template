@@ -1,6 +1,6 @@
 # Template file for 'kwayland-integration'
 pkgname=kwayland-integration
-version=5.19.3
+version=5.19.5
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -9,6 +9,6 @@ makedepends="kidletime-devel kwayland-devel kwindowsystem-devel kguiaddons-devel
 short_desc="Integration plugins for Kwayland"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
-homepage="https://projects.kde.org/projects/plasma/kwayland-integration"
+homepage="https://invent.kde.org/plasma/kwayland-integration"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=661a412bc9a37018ec30843b36af25c49816449a681e707a8c3dad0cbf531679
+checksum=6d1bed734cd256604736417846f891abad9bd7c2a45527fc6fc10560322c8a14

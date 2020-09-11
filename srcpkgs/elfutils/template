@@ -1,7 +1,7 @@
 # Template file for 'elfutils'
 pkgname=elfutils
 version=0.180
-revision=1
+revision=4
 build_style=gnu-configure
 configure_args="--program-prefix=eu- --disable-debuginfod"
 hostmakedepends="automake libtool pkg-config"
@@ -16,7 +16,7 @@ checksum=b827b6e35c59d188ba97d7cf148fa8dc6f5c68eb6c5981888dfdbb758c0b569d
 CFLAGS="-Wno-error -Wno-error=null-dereference"
 
 case "$XBPS_TARGET_MACHINE" in
-	*-musl) makedepends+=" argp-standalone musl-fts-devel musl-obstack" ;;
+	*-musl) makedepends+=" argp-standalone musl-fts-devel musl-obstack-devel" ;;
 esac
 
 if [ "$CROSS_BUILD" ]; then
@@ -43,7 +43,7 @@ libelf_package() {
 }
 
 elfutils-devel_package() {
-	depends="libelf>=${version}_${revision}"
+	depends="libelf>=${version}_${revision} ${makedepends}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include

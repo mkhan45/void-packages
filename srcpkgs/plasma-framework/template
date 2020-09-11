@@ -1,6 +1,6 @@
 # Template file for 'plasma-framework'
 pkgname=plasma-framework
-version=5.71.0
+version=5.73.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF
@@ -13,9 +13,9 @@ depends="qt5-quickcontrols qt5-graphicaleffects qt5-multimedia"
 short_desc="Foundational libraries, components, and tools of the Plasma workspaces"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
-homepage="https://projects.kde.org/projects/frameworks/plasma-framework"
+homepage="https://invent.kde.org/frameworks/plasma-framework"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=a54c8603ca261c89609a3009536a9217ce3415a7fd63527ed36f266399613067
+checksum=e5415143f0a08cd75cf758b0692021d2a2febdcb1364e2aa1e5c8fbeee148c93
 
 plasma-framework-devel_package() {
 	short_desc+=" - development"

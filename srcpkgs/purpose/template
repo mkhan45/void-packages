@@ -1,6 +1,6 @@
 # Template file for 'purpose'
 pkgname=purpose
-version=5.71.0
+version=5.73.0
 revision=1
 build_style=cmake
 hostmakedepends="kcoreaddons qt5-qmake qt5-host-tools extra-cmake-modules
@@ -10,9 +10,16 @@ makedepends="qt5-devel qt5-declarative-devel kcoreaddons-devel kconfig-devel
 short_desc="Offers available actions for a specific purpose"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
-homepage="https://projects.kde.org/projects/frameworks/purpose"
+homepage="https://invent.kde.org/frameworks/purpose"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=de0531a84f671a15fe4a6348220e922a3230178554e26baf392a1f295044e4be
+checksum=6f4d440cb708b636430e3206f879ca5c2e6cdfcf62f92ce173d43e291fbeed32
+
+do_check() {
+	export QT_QPA_PLATFORM=offscreen
+	cd build
+	# QML test that requires OpenGL
+	CTEST_OUTPUT_ON_FAILURE=TRUE ctest -E 'menutest'
+}
 
 purpose-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

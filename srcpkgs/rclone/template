@@ -1,19 +1,18 @@
 # Template file for 'rclone'
 pkgname=rclone
-version=1.52.1
+version=1.53.0
 revision=1
 wrksrc="rclone-v${version}"
 build_style=go
 go_import_path=github.com/rclone/rclone
-hostmakedepends="git"
+go_ldflags="-extldflags=-fuse-ld=bfd"
 short_desc="Rsync for cloud storage"
 maintainer="Diogo Leal <diogo@diogoleal.com>"
 license="MIT"
 homepage="https://rclone.org/"
 changelog="https://raw.githubusercontent.com/rclone/rclone/master/docs/content/changelog.md"
 distfiles="https://github.com/rclone/rclone/releases/download/v${version}/rclone-v${version}.tar.gz"
-checksum=a95fbac3768bc5fa563fff8305786f6cfddd3457deb570a3ada4c776f1a87553
-nocross="Problems with the dynamic linker: https://api.travis-ci.org/v3/job/613099406/log.txt"
+checksum=1aba1774237ff6ac13f007c854816789b1b41d257aa5d9425a053263a7846f55
 
 post_install() {
 	vlicense COPYING

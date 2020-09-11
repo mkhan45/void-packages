@@ -1,6 +1,6 @@
 # Template file for 'knotifications'
 pkgname=knotifications
-version=5.71.0
+version=5.73.0
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -10,9 +10,9 @@ makedepends="kwindowsystem-devel kcodecs-devel kconfig-devel
 short_desc="KDE Desktop notifications"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
-homepage="https://projects.kde.org/projects/frameworks/knotifications"
+homepage="https://invent.kde.org/frameworks/knotifications"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname}-${version}.tar.xz"
-checksum=b900146340621d54f6113600e85d287b28225d82515affb8690704433e5d0440
+checksum=c8e9f36716db33baca93a0386d3bb6426408eee3843eb5854bdd8ad7579f372c
 
 knotifications-devel_package() {
 	short_desc+=" - development"

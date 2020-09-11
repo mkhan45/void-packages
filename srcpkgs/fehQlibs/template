@@ -1,6 +1,6 @@
 # Template file for 'fehQlibs'
 pkgname=fehQlibs
-version=14
+version=15a
 revision=2
 build_style=gnu-makefile
 short_desc="State-of-the-art C routines for Internet services"
@@ -8,7 +8,7 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Public Domain"
 homepage="http://www.fehcom.de/ipnet/qlibs.html"
 distfiles="http://www.fehcom.de/ipnet/fehQlibs/fehQlibs-${version}.tgz"
-checksum=1ea19a0172cc9826fcd7e0b44cc93f6b928c8144dc90452474d9980f1f57f074
+checksum=2064152311cd73fb15f078fc8978daec9265028824e7374cb47a1ea5803967db
 disable_parallel_build=yes
 
 post_extract() {
@@ -17,7 +17,7 @@ post_extract() {
 
 do_build() {
 	cat >conf-build <<EOF
-CFLAGS='$CFLAGS -fPIC'
+CFLAGS='$CFLAGS -fcommon -fPIC'
 LIBDIR=$DESTDIR/usr/lib
 HDRDIR=$DESTDIR/usr/include/fehQlibs
 EOF
