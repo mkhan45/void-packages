@@ -1,0 +1,15 @@
+# Template file for 'templater'
+pkgname=templater
+version=0.1.1
+revision=1
+build_style=cargo
+short_desc="Simple templating tool"
+maintainer="Mikail <mikail.khan@protonmail.com>"
+license="MIT"
+homepage="https://github.com/mkhan45/templater"
+distfiles="https://github.com/mkhan45/templater/archive/${version}.tar.gz"
+checksum=ccc6a19b9d114533dd1b3a6836f2ff09b60c5efd65e34cdab75d5019d9ed0484
+
+post_install() {
+    vdoc README.md
+}

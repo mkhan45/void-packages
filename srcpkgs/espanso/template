@@ -1,0 +1,22 @@
+# Template file for 'espanso'
+pkgname=espanso
+version=0.6.3
+revision=1
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libressl-devel cmake xdotool-devel libX11-devel libXtst-devel"
+depends="libressl xdotool"
+short_desc="Hotstring manager"
+maintainer="Mikail <mikail.khan@protonmail.com>"
+license="GPL-3.0"
+homepage="https://github.com/federico-terzi/espanso"
+distfiles="https://github.com/federico-terzi/espanso/archive/v${version}.tar.gz"
+checksum=17fd78874f4fc9175ee62c0166ed7ce7aa54824a25009e9bdd0496a46a17b671
+
+pre_build() {
+    cargo update --package openssl-sys --precise 0.9.58
+}
+
+post_install() {
+    vdoc README.md
+}
